@@ -17,7 +17,7 @@ And use your custom config and store bind a data
 ```
 docker run --rm  \
   --publish 9090:9090 \
-  --volume /path/to/file/prometheus.yml:/config/prometheus.yml
-  --volume /path/to/storage:/data
+  --volume /path/to/file/prometheus.yml:/config/prometheus.yml \
+  --volume /path/to/storage:/data \
   rickykurniawanlie/prometheus
 ```
