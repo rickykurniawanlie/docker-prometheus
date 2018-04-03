@@ -1,5 +1,5 @@
 # Dockerized Prometheus
-A clearer Prometheus docker image than prom/prometheus.
+User friendly Prometheus docker image than prom/prometheus.
 
 ## Feature
 - Explicitly `EXPOSE 9090`
@@ -9,13 +9,15 @@ A clearer Prometheus docker image than prom/prometheus.
 
 ## How to use:
 You can test it using
-```docker run --rm -p 9090:9090 rickykurniawanlie/prometheus```
+```
+docker run --rm -p 9090:9090 rickykurniawanlie/prometheus
+```
 
 And use your custom config and store bind a data
 ```
 docker run --rm  \
   --publish 9090:9090 \
-  --volume /path/to/file/prometheus.yml:/config
+  --volume /path/to/file/prometheus.yml:/config/prometheus.yml
   --volume /path/to/storage:/data
   rickykurniawanlie/prometheus
 ```
